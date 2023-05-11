@@ -1,13 +1,14 @@
 
 
 <div>
-
-            <h1>promo : <% studentPromo %></h1>
-            <div> <%= studentId %> </div>
-            <div> <%= studentFirstName %> </div>
-            <div> <%= studentLastName %> </div>
-            <div> <%= studentGitHubUserName %> </div>
-            <img src=" <% studentPicture %>" alt="Student's picture">
-            
+    <h1>promo : <% promo.promo %></h1>
+    <% for (const student of promo) { %>
+            <div> <%= student.github_username %> </div><br>
+            <div> <%= student.first_name %> </div><br>
+            <div> <%= student.last_name %> </div><br>
+            <div> <%= student.id %> </div><br>
+            <img src=" <% student.profile_picture_url %>" alt="Student's picture"> <br>
+            <% console.log(student.profile_picture_url); %>
+    <% } %>        
     
 </div>
