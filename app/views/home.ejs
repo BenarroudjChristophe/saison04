@@ -1,0 +1,15 @@
+
+    
+    
+    
+    
+    <div>
+        
+        <% for(const promo of promos) { %>
+            <div><%= promo.name %></div>
+        <a href="/promo/<%= promo.id %>">plus de détails</a>
+        <a href="<%= promo.github_organization %>">Lien github</a>
+            <% } %>
+        </div>
+    </body>
+    </html>
