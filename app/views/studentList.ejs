@@ -1,14 +1,22 @@
-
+<%- include('./partials/header') %>
 
 <div>
-    <h1>promo : <% promo.promo %></h1>
+
+
+    
+
+
+    <h1>promo : <%= foundPromo.name %></h1>
     <% for (const student of promo) { %>
-            <div> <%= student.github_username %> </div><br>
-            <div> <%= student.first_name %> </div><br>
-            <div> <%= student.last_name %> </div><br>
-            <div> <%= student.id %> </div><br>
-            <img src=" <% student.profile_picture_url %>" alt="Student's picture"> <br>
-            <% console.log(student.profile_picture_url); %>
+        <img src="<%= student.profile_picture_url %>"" alt="Student's picture"> 
+        <div> Prénom : <%= student.first_name %> </div>
+        <div> Nom : <%= student.last_name %> </div>
+        <div> <%= student.id %> </div>
+        <div> <%= student.github_username %> </div><br>
+            
+            
     <% } %>        
     
 </div>
+
+<%- include('./partials/footer') %>

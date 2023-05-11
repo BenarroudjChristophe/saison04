@@ -1,12 +1,22 @@
-<div>
+<%- include('./partials/header') %>
 
 
-    
-        <div> <%= promo.name %> </div>
-        <div> <%= promo.id %> </div>
-        <a href=" <%= promo.github_organization %>" > Lien github </a> <br>
-        <a href ="<%= promo.id %>/students">Liste des étudiants de la promo</a>
-       
+<main>
+
+
+        <h1>Promo : <%= promo.name %> </h1>
         
+            
+        <p>Github : <a href=" <%= promo.github_organization %> "> <%= promo.github_organization %> </a></p>
+        <nav>
+            <ul>
+                <li><a href="/promo/<%= promo.id %>/students">Liste des étudiants</a></li>
+                <li><a href="promo_edit.html">Modifier la promo</a></li>
+            </ul>
+        </nav>
+        
+        </main>
 
-</div>
+
+
+<%- include('./partials/footer') %>

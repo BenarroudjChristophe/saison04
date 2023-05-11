@@ -1,0 +1,28 @@
+<%- include('./partials/header') %>
+
+
+<main>
+  
+  
+  <%   for (const promo of promos) { %>
+        
+
+    <h1>Promo : <a href="/promo/<%= promo.id %>"> <%= promo.name %> </a><h1>
+    
+        
+    <p>Github : <a href=" <%= promo.github_organization %> "> <%= promo.github_organization %> </a></p>
+
+    <nav>
+        <ul>
+            <li><a href="/promo/<%= promo.id %>">Liste des étudiants</a></li>
+            <li><a href="promo_edit.html">Modifier la promo</a></li>
+        </ul>
+    </nav>
+    <% } %>
+    
+    </main>
+
+
+
+
+<%- include('./partials/footer') %>

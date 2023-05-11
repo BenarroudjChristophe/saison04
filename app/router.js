@@ -6,6 +6,7 @@ const studentController = require("./controllers/studentController");
 const router = Router();
 
 router.get("/", mainController.homePage);
+router.get("/promo", promoController.promoList);
 router.get("/promo/:id", promoController.promoDetail);
 router.get("/promo/:id/students", studentController.studentDetail);
 

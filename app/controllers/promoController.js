@@ -10,6 +10,10 @@ const promoController = {
     // on envoie l'entrée trouvée à la vue
     res.render("promoDetail", { promo: foundPromo });
   },
+
+  promoList(req, res) {
+    res.render("promoList", { promos });
+  },
 };
 
 module.exports = promoController;
