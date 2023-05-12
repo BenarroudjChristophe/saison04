@@ -8,6 +8,6 @@ const router = Router();
 router.get("/", mainController.homePage);
 router.get("/promo", promoController.promoList);
 router.get("/promo/:id", promoController.promoDetail);
-router.get("/promo/:id/students", studentController.studentDetail);
+router.get("/promo/:id/students", studentController.studentList);
 
 module.exports = router;

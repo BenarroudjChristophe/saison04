@@ -14,6 +14,6 @@ app.use(express.static("public"));
 
 app.use(router);
 
-app.listen(port, () => {
-  console.log(`listening on port ${port}`);
+app.listen(process.env.PORT, () => {
+  console.log(`projet démarré : http://localhost:${process.env.PORT}`);
 });
